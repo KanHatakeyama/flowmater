@@ -8,6 +8,8 @@
 - pip install git+https://github.com/KanHatakeyama/flowmater.git
 - RDKit and networkX are required
 
+# Note
+- this is a beta version
 
 # History
 - version 2021.5.05
