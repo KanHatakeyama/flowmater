@@ -48,11 +48,11 @@ def load_xlsx_of_graph(g,parent_node_list,path,experiment_dict):
                 var_to_key_dict[v]=k
                 break
 
-
     #make full database as dict
     database_as_dict={}
     for i in range(result_df.shape[0]):
         temp_dict=copy.deepcopy(experiment_dict)
+        
         for k,v in var_to_key_dict.items():
             temp_dict[v]=result_df[k.replace("{","").replace("}","")][i]
         database_as_dict[path.replace(".graphml","")+"_"+str(i)]=temp_dict
@@ -152,8 +152,8 @@ def make_base_dict(g,parent_node_list):
                     experiment_dict[label+"_SMILES"]=v
                     smiles_count+=1
 
-            if smiles_count!=1:
-                print("caution! too many or few smiles! ", val_list)
+            #if smiles_count!=1:
+            #    print("caution! too many or few smiles! ", val_list)
 
         #load numberics or user variables
         for val in val_list:

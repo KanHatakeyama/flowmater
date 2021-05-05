@@ -1,0 +1,5 @@
+﻿name,SMILES,MP
+pe (n=300),[Q]CC[Q: n=300],1
+pe-peg-OH,[Q]CC[Q: connect=block]OCC[Q]O,2
+acetnitrile/methanol = 0.4/0.6,"N#CC[Q: n=0.4][Q: connect=mix, n=0.6]CO",3
+cyclobutylmethane,C1(CCC1)C,-161.51
