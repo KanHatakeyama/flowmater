@@ -13,7 +13,10 @@
 - this is a beta version
 
 # History
-- version 2021.5.05
+- version 2021.5.05: initial ver.
+- version 2021.5.10: fix bug (during loading numbers and smiles)
+
+
 
 # Author
 - Kan Hatakeyama-Sato

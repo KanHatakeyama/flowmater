@@ -119,8 +119,12 @@ def process_graph(g):
                     continue
 
                 #skip number
-                if re.match("\d+$", v):
+                try: 
+                    float(v)
                     continue
+                except:
+                    pass
+                
                 #skip user variables
                 if re.match('{.*}$', v):
                     continue
@@ -158,8 +162,13 @@ def make_base_dict(g,parent_node_list):
         #load numberics or user variables
         for val in val_list:
             #number
-            if re.match('\d+$', val):
+            try: 
                 experiment_dict[label]=float(val)
+            except:
+                pass
+            #number
+            #if re.match('\d+$', val):
+            #    experiment_dict[label]=float(val)
 
             #user val
             if re.match('{.*}$', val):
