@@ -149,7 +149,7 @@ def make_base_dict(g,parent_node_list):
             for v in val_list:
                 m = Chem.MolFromSmiles(v)
                 if m is not None:
-                    experiment_dict[label+"_SMILES"]=v
+                    experiment_dict[label]=v
                     smiles_count+=1
 
             #if smiles_count!=1:
