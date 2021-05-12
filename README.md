@@ -7,7 +7,13 @@
 # Install
 - pip install --force-reinstall git+https://github.com/KanHatakeyama/flowmater.git
 - pip install --force-reinstall git+https://github.com/KanHatakeyama/polySMILES.git
+
 - RDKit and networkX are required
+	- Environment example
+	- conda create -n mi python==3.7.9 matplotlib==3.3.1 jupyter==1.0.0 rdkit==2021.03.1 
+	- conda install -c anaconda networkx==2.5 -y
+	- conda install -c anaconda git -y
+
 
 # Note
 - this is a beta version
