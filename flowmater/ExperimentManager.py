@@ -13,7 +13,12 @@ class ExperimentManager:
     def load_experiments(self,folder_path="database"):
         folder_path+="/*.graphml"
         #load graphml files in the folder
-        for i,path in enumerate(glob.glob(folder_path)):
+        path_list=glob.glob(folder_path)
+
+        if len(path_list)==0:
+            raise ValueError("no files found in ", folder_path)
+
+        for i,path in enumerate(path_list):
             exp_data=ExperimentData(path)
 
             self.experiment_list.append(exp_data)
@@ -33,6 +38,7 @@ class ExperimentManager:
                 for k,v in exp_data.experiment.items():
                     self.database[k]=v
             self.total_graph_numbers+=1
+        
         
     def classify_experiments(self):
         graph_type_dict=categorize_graphs(self.graph_list)
