@@ -142,7 +142,12 @@ def make_base_dict(g,parent_node_list):
     experiment_dict={}
 
     for parent_node in parent_node_list:
-        label=g.nodes[parent_node]["label"]
+        
+        try:
+            label=g.nodes[parent_node]["label"]
+        except:
+            raise ValueError("no info available in the following node: ",g.nodes[parent_node])
+        
         val_list=g.nodes[parent_node]["value"]
 
         #load chemicals
