@@ -22,7 +22,7 @@
 - version 2021.5.05: initial ver.
 - version 2021.5.10: fix bug (during loading numbers and smiles)
 - version 2021.5.12: implement fingerprint function
-
+- version 2021.6.19: fix bug during the use of polysmiles
 
 
 

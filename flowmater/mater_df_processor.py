@@ -34,6 +34,7 @@ class mater_df_processor:
         self.chem_column_list=chem_column_list
         self.to_numeric_dict=to_numeric_dict
         self.psm=psm
+        self.psm.dict_mode=False
         self.fill_mean=fill_mean
         
         self.nan_columns=[]

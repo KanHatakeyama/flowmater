@@ -2,6 +2,8 @@ import glob
 from .ExperimentData import ExperimentData
 from .graph_util import categorize_graphs
 
+from rdkit import RDLogger             
+RDLogger.DisableLog('rdApp.*')   
 
 class ExperimentManager:
     def __init__(self):
