@@ -115,6 +115,7 @@ class mater_df_processor:
 
         for chem_column in self.chem_column_list:
             print("process: ",chem_column)
+            self.psm.dict_mode=False
             chem_df=self.psm.auto(X[chem_column])
             chem_df.columns=[i+"_"+chem_column for i in chem_df.columns]
 
