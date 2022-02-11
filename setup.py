@@ -8,6 +8,6 @@ setup(name='flowmater',
         description='PolySMILES',
         long_description="README",
         author='Kan Hatakeyama',
-        license=license,
+        license="MIT",
         packages = find_packages(),
     )
